@@ -7,8 +7,8 @@ void *ft_calloc(size_t nelem, size_t elsize)
     void *array;
     char *ptr;
 
-    if (nelem == 0 || elsize == 0)
-        return (NULL);
+   if (nelem == 0 || elsize == 0)
+        return (0);
     array = malloc(nelem * elsize);
     if (!array)
         return (NULL);
@@ -27,13 +27,23 @@ void *ft_calloc(size_t nelem, size_t elsize)
 int main()
 {
 
-    int *arr = ft_calloc(5, sizeof(int));
+    int *my_arr = ft_calloc(0, sizeof(int));
+    int *lib_arr = calloc(0, sizeof(int));
     int i = 0;
+    printf("My array:");
     while (i < 5)
     {
-        printf("%d", arr[i]);
+        printf("%d", my_arr[i]);
         i++;
     }
+    i = 0;
+    printf("\nLib arry:");
+    while (i < 5)
+    {
+        printf("%d", lib_arr[i]);
+        i++;
+    }
+
     printf("\n");
     return 0;
 }
