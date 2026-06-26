@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dzzayats <dzzayats@student.42warsaw.p      +#+  +:+       +#+        */
+/*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 23:13:01 by dzzayats          #+#    #+#             */
-/*   Updated: 2026/06/18 09:16:11 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/06/26 02:25:50 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,12 @@ char	*ft_strdup(char *src)
 	return (dst);
 }
 /*
+#include <stdio.h>
+
 int main(void)
 {
-	char *K_WORD = "jfeVZotSBxr4 TJ40jWuAfb snGJ8 473i1zOyRHfJT
-	WJ3lqUmP1RYZB2 jNs9y1M3UCv OaqcGFNdD2HT4bCok";
+	char *K_WORD = "-2147483648";
 	char *N_WORD = ft_strdup(K_WORD);
 	printf("%s",N_WORD);
-}*/
+}
+*/

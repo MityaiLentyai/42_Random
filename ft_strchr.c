@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+// 		ft_strchr(set,)
+//  The strchr() function returns a pointer to the first occurrence of the 
+//  character c in the string s.
+//  The  strchr() and strrchr() functions return a pointer to the matched 
+//  character or NULL if the character is not found.  The terminating null 
+//  byte is considered part of the string, so that
+//  if c is specified as '\0', these functions return 
+//  a pointer to the terminator.
+
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
@@ -27,15 +36,15 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)(s + i));
 	return (NULL);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-#define STR "ABCD"
-#define LTR 'C'
 
-int main()
-{
-char * str = STR;
-printf("%p\n",strchr(str,LTR));
-printf("%p",ft_strchr(str,LTR));
-}*/
+// #include <string.h>
+// #include <stdio.h>
+// #define STR "ABCD"
+// #define LTR 'c'
+
+// int main()
+// {
+// char * str = STR;
+// printf("%p\n",strchr(str,LTR));
+// printf("%p",ft_strchr(str,LTR));
+// }
