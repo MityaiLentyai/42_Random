@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_striteri.c                                     :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: dzzayats <dzzayats@student.42warsaw.pl>   #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/06/27 03:41:20 by dzzayats         #+#    #+#              */
-/*   Updated: 2026/06/27 13:09:54 by dzzayats        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/27 03:41:20 by dzzayats          #+#    #+#             */
+/*   Updated: 2026/06/27 15:12:41 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,18 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 }
 
-void	addOne(unsigned int count, char *c)
-{
-	c[count] += 1;
-}
-#include <stdio.h>
+// void	addOne(unsigned int count, char *c)
+// {
+// 	c[count] += 1;
+// }
+// #include <stdio.h>
 
-int	main(void)
-{
-	char	string[] =
-	{
-		"ABCD"
-	};
-	ft_striteri(string, addOne);
-	printf("%s", string);
-}
+// int	main(void)
+// {
+// 	char	string[] =
+// 	{
+// 		"ABCD"
+// 	};
+// 	ft_striteri(string, addOne);
+// 	printf("%s", string);
+// }
