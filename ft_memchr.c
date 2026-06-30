@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dzzayats <dzzayats@student.42warsaw.p      +#+  +:+       +#+        */
+/*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 20:09:46 by dzzayats          #+#    #+#             */
-/*   Updated: 2026/06/23 20:12:53 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/06/29 22:14:59 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,26 +21,19 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (ptr_s[i] == c)
+		if (ptr_s[i] == (unsigned char)c)
 			return (ptr_s + i);
 		i++;
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int main(void)
-{
-    const char str[] = "ABCDEFG";
-    const int chars[] = {'D', 'd'};
-    for (size_t i = 0; i < sizeof chars / (sizeof chars[0]); ++i)
-    {
-        const int c = chars[i];
-        const char *ps = ft_memchr(str,c, strlen(str));
-        ps ? printf ("character '%c'(%i) found: %s\n", c, c, ps)
-           : printf ("character '%c'(%i) not found %s\n", c, c,ps);
-    }
-    return 0;
-}*/
+// int main(void)
+// {
+//     const char str[] = "ABCDEFG";
+//     int c = 'B'+256;
+//         printf ("String:%p\n",ft_memchr(str, c, 3));
+//     return 0;
+// }

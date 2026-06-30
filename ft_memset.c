@@ -6,7 +6,7 @@
 /*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 17:07:36 by username          #+#    #+#             */
-/*   Updated: 2026/06/22 21:34:38 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/06/29 17:15:48 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	char	*ptr;
 
 	byte = (char) c;
-	ptr = (unsigned char *) s;
+	ptr = (char *) s;
 	i = 0;
 	while (i < n)
 	{

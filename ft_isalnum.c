@@ -6,29 +6,11 @@
 /*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 23:20:06 by username          #+#    #+#             */
-/*   Updated: 2026/06/22 21:34:15 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/06/29 19:02:02 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	int	is_alpha;
-
-	is_alpha = 1;
-	if (c >= 0 && c < 65)
-	{
-		is_alpha = 0;
-	}
-	if (c > 90 && c < 97)
-	{
-		is_alpha = 0;
-	}
-	if (c > 122)
-	{
-		is_alpha = 0;
-	}
-	return (is_alpha);
-}
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

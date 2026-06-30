@@ -6,18 +6,18 @@
 /*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 23:13:01 by dzzayats          #+#    #+#             */
-/*   Updated: 2026/06/26 02:25:50 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/06/29 19:47:22 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-//#include <stdio.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*dst;
-	int		i;
-	int		len;
+	size_t  i;
+	size_t  len;
 
 	i = 0;
 	len = 0;

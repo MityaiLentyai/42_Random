@@ -6,7 +6,7 @@
 /*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 00:28:16 by dzzayats          #+#    #+#             */
-/*   Updated: 2026/06/29 02:10:07 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/06/29 18:07:46 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,6 @@ char	**ft_split(char const *s, char c)
 {
 	char	**r;
 	size_t	count;
-	size_t	i;
 
 	if (!s)
 		return (NULL);

@@ -12,6 +12,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t nelem, size_t elsize)
 {
@@ -20,26 +21,28 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 	char	*ptr;
 
 	if (nelem == 0 || elsize == 0)
-		return (0);
+		return (malloc(1));
+	if ((nelem != 0) && (elsize > (size_t) - 1 / nelem))
+		return (NULL);
 	array = malloc(nelem * elsize);
 	if (!array)
 		return (NULL);
-	ptr = (char *)array;
+	ptr = (char *) array;
 	i = 0;
 	while (i < nelem * elsize)
 	{
-		*(ptr + i) = 0;
+		ptr[i] = 0;
 		i++;
 	}
 	return (array);
 }
 
-// int main()
+// int	main(void)
 // {
+// 	int	*my_arr = ft_calloc(2150483666, sizeof(int));
+// 	int	*lib_arr = calloc(2150483666, sizeof(int));
+// 	int	i = 0;
 
-// 	int	*my_arr = ft_calloc(0, sizeof(int));
-// 	int	*lib_arr = calloc(0, sizeof(int));
-// 	int i = 0;
 // 	printf("My array:");
 // 	while (i < 5)
 // 	{
@@ -53,7 +56,6 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 // 		printf("%d", lib_arr[i]);
 // 		i++;
 // 	}
-
-//     printf("\n");
-//     return 0;
+// 	printf("\n");
+// 	return (0);
 // }

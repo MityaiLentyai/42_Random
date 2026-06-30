@@ -6,11 +6,13 @@
 /*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 14:37:34 by username          #+#    #+#             */
-/*   Updated: 2026/06/22 21:34:53 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/06/29 19:48:54 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, const char *src,long unsigned int size)
 {
 	unsigned int	i;
 

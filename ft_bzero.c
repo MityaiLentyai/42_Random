@@ -6,7 +6,7 @@
 /*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/21 18:49:53 by username          #+#    #+#             */
-/*   Updated: 2026/06/22 21:33:58 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/06/29 19:33:40 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_bzero(void *s, size_t n)
 	size_t	i;
 	char	*ptr;
 
-	ptr = (unsigned char *) s;
+	ptr = (char *) s;
 	i = 0;
 	while (i < n)
 	{
