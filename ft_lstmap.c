@@ -1,42 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/22 19:48:41 by username          #+#    #+#             */
-/*   Updated: 2026/07/01 19:56:52 by dzzayats         ###   ########.fr       */
+/*   Created: 2026/06/27 02:40:45 by dzzayats          #+#    #+#             */
+/*   Updated: 2026/07/02 01:00:28 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	unsigned char		*dest_ptr;
-	const unsigned char	*src_ptr;
-	size_t				i;
+	t_list	*result;
+	t_list	*tmp_node;
+	void	*new_content;
 
-	dest_ptr = dest;
-	src_ptr = src;
-	i = 0;
-	while (i < n)
+	if (!lst || !f)
+		return (NULL);
+	result = NULL;
+	while (lst)
 	{
-		dest_ptr[i] = src_ptr[i];
-		i++;
+		new_content = f(lst->content);
+		tmp_node = ft_lstnew(new_content);
+		if (!tmp_node)
+		{
+			del(new_content);
+			ft_lstclear(&result, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&result, tmp_node);
+		lst = lst->next;
 	}
-	return (dest_ptr);
+	return (result);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int	main(void)
-// {
-// 	char	dest[5] = "ABCDE";
-
-// 	// char	*src = "ABCDE";
-// 	memmove(dest + 1, dest, 3);
-// 	printf("Result:%s", dest);
-// }

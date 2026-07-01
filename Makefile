@@ -41,18 +41,18 @@ OBJ = $(SRC:.c=.o)
 
 CFLAGS += -Wall -Werror -Wextra
 
-NAME = libft
+NAME = libft.a
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME).a $(OBJ)
+	@ ar rcs $(NAME) $(OBJ)
 
 clean:
-	rm -f $(OBJ)
+	@ rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@ rm -f $(NAME)
 
 re: fclean $(NAME)
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_strmapi.c                                      :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: dzzayats <dzzayats@student.42warsaw.pl>   #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/06/26 23:21:53 by dzzayats         #+#    #+#              */
-/*   Updated: 2026/06/27 03:47:32 by dzzayats        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/26 23:21:53 by dzzayats          #+#    #+#             */
+/*   Updated: 2026/07/02 01:16:48 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,33 +30,32 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	len;
-	size_t	i;
-	char	*str;
+	unsigned int	param;
+	char			*str;
+	size_t			i;
 
 	i = 0;
-	len = ft_strlen(s);
-	str = malloc(len * sizeof(char));
+	param = 0;
+	str = ft_strdup(s);
 	if (!str)
 		return (NULL);
-	while (i < len)
+	while (str[i])
 	{
-		str[i] = f((unsigned int) i, s[i]);
+		str[i] = f(param, s[i]);
 		i++;
 	}
-	str[i] = '\0';
 	return (str);
 }
 
-// char	addOne(unsigned int count, char c)
-// {
-// 	return (char)(c + 1);
-// }
-// #include <stdio.h>
+char	addOne(unsigned int count, char c)
+{
+	return (c + 1);
+}
+#include <stdio.h>
 
-// int	main(void)
-// {
-// 	char	*string = "ABCD";
+int	main(void)
+{
+	char	*string = "1234";
 
-// 	printf("%s", ft_strmapi(string, addOne));
-// }
+	printf("%s", ft_strmapi(string, addOne));
+}

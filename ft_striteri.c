@@ -6,7 +6,7 @@
 /*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/27 03:41:20 by dzzayats          #+#    #+#             */
-/*   Updated: 2026/06/27 15:12:41 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/07/01 16:24:34 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,29 +26,27 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t			i;
+	size_t	i;
 	const size_t	len = ft_strlen(s);
 
 	i = 0;
 	while (i < len)
 	{
-		f((unsigned int) i, s);
+		f((unsigned int) i, s + i);
 		i++;
 	}
 }
+/*
+void	compare(unsigned int count, char *c)
+{
+*c += count;
+}
+#include <stdio.h>
 
-// void	addOne(unsigned int count, char *c)
-// {
-// 	c[count] += 1;
-// }
-// #include <stdio.h>
+int	main(void)
+{
+char	string[] = "0000000000";
 
-// int	main(void)
-// {
-// 	char	string[] =
-// 	{
-// 		"ABCD"
-// 	};
-// 	ft_striteri(string, addOne);
-// 	printf("%s", string);
-// }
+ft_striteri(string, compare);
+printf("%s", string);
+}*/

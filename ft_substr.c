@@ -6,68 +6,37 @@
 /*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 18:18:20 by dzzayats          #+#    #+#             */
-/*   Updated: 2026/06/26 02:02:52 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/07/01 22:08:13 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-/*
-	s: The original string from which to create the substring.
-	start: The starting index of the substring within ’s’.
-	len: The maximum length of the substring.
-	
-	Return Value The substring.
-	NULL if the allocation fails.
-*/
-/*
-char *ft_substr(char const *s, unsigned int start, size_t len)
-{
-	size_t	i;
-	char	*substr;
-
-	if (!s)
-		return (NULL);	
-	substr = malloc((len+1)*sizeof(char));
-	if (!substr)
-		return (NULL);
-	i = len;
-	while (i < len && s[start + i])
-	{
-		substr[i] = s[start + i];
-		i++;
-	}
-	substr[i] = '\0';
-	return (substr);
-}
-*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	char	*substr;
+	size_t real_len;
+        char	*substr;
 
-	if (!s)
-		return (NULL);
-	substr = malloc((len + 1) * sizeof(char));
+         real_len= ft_strlen(s);
+	if (real_len - start > len)
+		real_len = len;
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	substr = malloc(real_len + 1);
 	if (!substr)
-		return (NULL);
-	i = 0;
-	while (i < len && s[start + i])
-	{
-		substr[i] = s[start + i];
-		i++;
-	}
-	substr[i] = '\0';
+		return (0);
+	ft_strlcpy(substr, s + start, real_len + 1);
 	return (substr);
 }
 
 // #include <stdio.h>
 
-// int main()
+// int	main(void)
 // {
-// 	char *string = "ABCDE";
-// 	unsigned int start = 0 ;
-// 	size_t len = -2;	
-// 	printf("%s", ft_substr(string, start, len));
+//      char   *str = ft_strdup("0123456789");
+//        char  *s = ft_substr(str, 9, 10);
+// 	printf("%s", s);
+//         free(s);
+//         free(str);
 // }

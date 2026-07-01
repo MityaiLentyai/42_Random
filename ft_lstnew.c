@@ -6,7 +6,7 @@
 /*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 21:35:46 by dzzayats          #+#    #+#             */
-/*   Updated: 2026/07/01 04:06:29 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/07/01 22:07:05 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,18 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*head;
 
-	head = malloc(sizeof(t_list));
+	head = calloc(sizeof(t_list), 1);
 	if (!head)
 		return (NULL);
 	head->content = content;
-	head->next = (NULL);
+	return (head);
 }
+
+// int	main(void)
+// {
+// 	int		a = 5;
+// 	t_list	*first = ft_lstnew(&a);
+
+// 	printf("%p", first->content);
+        
+// }

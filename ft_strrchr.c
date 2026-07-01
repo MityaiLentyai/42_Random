@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dzzayats <dzzayats@student.42warsaw.p      +#+  +:+       +#+        */
+/*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 23:11:26 by dzzayats          #+#    #+#             */
-/*   Updated: 2026/06/22 23:11:30 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/07/01 23:16:15 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //       The strrchr() function returns a pointer to the last 
 //		 occurrence of the character c in the string s.
+// AAAAAAAAAAAAAAAAbbbbbbbAAAAAcAAAAA'\0'
 
 #include "libft.h"
 

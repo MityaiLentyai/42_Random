@@ -1,42 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/22 19:48:41 by username          #+#    #+#             */
-/*   Updated: 2026/07/01 19:56:52 by dzzayats         ###   ########.fr       */
+/*   Created: 2026/06/27 00:39:59 by dzzayats          #+#    #+#             */
+/*   Updated: 2026/07/02 01:00:08 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	unsigned char		*dest_ptr;
-	const unsigned char	*src_ptr;
-	size_t				i;
-
-	dest_ptr = dest;
-	src_ptr = src;
-	i = 0;
-	while (i < n)
-	{
-		dest_ptr[i] = src_ptr[i];
-		i++;
-	}
-	return (dest_ptr);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }
-
-// #include <stdio.h>
-// #include <string.h>
 
 // int	main(void)
 // {
-// 	char	dest[5] = "ABCDE";
+// 	t_list	*node;
+// 	char	*str;
 
-// 	// char	*src = "ABCDE";
-// 	memmove(dest + 1, dest, 3);
-// 	printf("Result:%s", dest);
+// 	str = ft_strdup("Trash");
+// 	node = ft_lstnew(str);
+// 	ft_lstdelone(node, free);
+// 	return (0);
 // }

@@ -36,8 +36,12 @@ cc main.c -I. -L. -lft
 
 Useful references for this project include:
 
-- The C standard library documentation and man pages.
-- 42 project subject materials and related tutorials on memory and string handling in C.
-- Articles and notes about linked lists, dynamic memory allocation, and file descriptor I/O.
+- The C standard library documentation and man pages. man7.org as well (It sometimes differs from our manpages in Linux)
+- Code Vault youtube on Linked Lists: https://www.youtube.com/@CodeVault
+- 
+-
+-
+
+
 
 AI assistance was used to help structure this README, review the overall implementation strategy, and clarify some C concepts during development. It was mainly used for documentation support and code explanation, not as a replacement for the core implementation.

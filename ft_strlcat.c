@@ -46,7 +46,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		dest[i + dest_len] = '\0';
 	return (src_len + dest_len);
 }
-
+/*
 #include <stdlib.h>
 #include <unistd.h>
 #include "libft.h"
@@ -73,4 +73,4 @@ int	main(int argc, const char *argv[])
 	printf("%ld\n%s", ft_strlcat(dest, arr, 6), dest);
 	// printf("%s", ft_strlcat(dest, arr, 5));
 	return (0);
-}
+}*/
