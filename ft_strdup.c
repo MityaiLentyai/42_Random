@@ -6,7 +6,7 @@
 /*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 23:13:01 by dzzayats          #+#    #+#             */
-/*   Updated: 2026/06/29 19:47:22 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/07/01 04:03:38 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 char	*ft_strdup(const char *src)
 {
 	char	*dst;
-	size_t  i;
-	size_t  len;
+	size_t	i;
+	size_t	len;
 
 	i = 0;
 	len = 0;
@@ -39,8 +39,8 @@ char	*ft_strdup(const char *src)
 
 int main(void)
 {
-	char *K_WORD = "-2147483648";
-	char *N_WORD = ft_strdup(K_WORD);
-	printf("%s",N_WORD);
+char *K_WORD = "-2147483648";
+char *N_WORD = ft_strdup(K_WORD);
+printf("%s",N_WORD);
 }
 */

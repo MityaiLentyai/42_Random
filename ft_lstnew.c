@@ -6,7 +6,7 @@
 /*   By: dzzayats <dzzayats@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 21:35:46 by dzzayats          #+#    #+#             */
-/*   Updated: 2026/06/30 02:11:05 by dzzayats         ###   ########.fr       */
+/*   Updated: 2026/07/01 04:06:29 by dzzayats         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,21 @@
 // initialized with the given parameter ’content’.
 // The variable ’next’ is initialized to NULL.
 
-// #include "libft.h"
-
-// t_list *ft_lstnew(void *content)
+// typedef struct s_list
 // {
-        
-// }
+// 	void			*content;
+// 	struct s_list	*next;
+// }	t_list;
+
+#include "libft.h"
+
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*head;
+
+	head = malloc(sizeof(t_list));
+	if (!head)
+		return (NULL);
+	head->content = content;
+	head->next = (NULL);
+}

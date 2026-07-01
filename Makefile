@@ -38,23 +38,22 @@ SRC = 	ft_atoi.c \
 	ft_toupper.c \
 
 OBJ = $(SRC:.c=.o)
-NAME = libft.a
+
+CFLAGS += -Wall -Werror -Wextra
+
+NAME = libft
 
 all: $(NAME)
-$(NAME): $(OBJ)
-	echo "Compiling $(NAME)"
-	-ar rcs $(NAME) $(OBJ) -o 
 
-%.o: %.c $(HEADER)
-	$(CC) $(CFLAGS) -c $< -o $@
+$(NAME): $(OBJ)
+	ar rcs $(NAME).a $(OBJ)
+
 clean:
-	rm $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	rm $(NAME)
+	rm -f $(NAME)
 
-re: fclean all
+re: fclean $(NAME)
 
 .PHONY: all clean fclean re
-	
-.SILENT:
